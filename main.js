@@ -100,6 +100,30 @@ const scrollBtn = document.getElementById("scrollToTopBtn");
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+ const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "thank-you.html"; // ✅ redirect on success
+        } else {
+          alert("Error sending message. Please try again.");
+        }
+      })
+      .catch(() => {
+        alert("Network error. Please check your connection.");
+      });
+    });
+
 });
 
 
