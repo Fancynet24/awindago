@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/*@custom-variant dark (&:where(.dark, .dark *));*/
+html {
+  scroll-behavior: smooth;
+}
+
+
+ 
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+.swiper-slide {
+  width: auto; /* allows each slide to size based on content */
+  padding: 10px 20px; /* optional for spacing */
+  background: #f0f0f0; /* for visibility */
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+

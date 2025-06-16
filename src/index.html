@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet"/>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <title>Awindago</title>
+ <meta name="description" content="Awindago Amidu - Portfolio: Web, Mobile, and Data Solutions">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="font-[Poppins] bg-[#05192d] text-white relative overflow-x-hidden scroll-smooth">
+<!-- Navbar -->
+<header>
+<nav class="fixed top-0 left-0 w-full h-16 bg-[#05192d] px-10  sm:px-6 shadow-md flex items-center z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between w-full">
+      <!-- Logo -->
+      <a href="#" class="pt-1">
+        <img class="w-24 hover:rotate-6 transition-transform duration-300" src="images/logo.png" alt="logo" />
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex items-center gap-6 sm:gap-10 font-extrabold text-sm sm:text-base">
+        <li><a class="hover:text-[#35f281] border-b-2 border-transparent hover:border-[#35f281] pb-1" href="#home">Home</a></li>
+        <li><a class="hover:text-[#35f281] border-b-2 border-transparent hover:border-[#35f281] pb-1" href="#projects">Projects</a></li>
+        <li><a class="hover:text-[#35f281] border-b-2 border-transparent hover:border-[#35f281] pb-1" href="#services">Services</a></li>
+        <li><a class="hover:text-[#35f281] border-b-2 border-transparent hover:border-[#35f281] pb-1" href="#contact">Contact</a></li>
+        <li><a class="hover:text-[#35f281] border-b-2 border-transparent hover:border-[#35f281] pb-1" href="#about">About</a></li>
+        <li><a class="hover:text-[#35f281] border-b-2 border-transparent hover:border-[#35f281] pb-1" href="#blog">Blog</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg id="menu-icon" class="w-10 h-7 text-white transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Links -->
+     <div id="mobile-menu" class="absolute top-full left-0  md:hidden hidden  flex-col items-start bg-[#03121f] 
+   text-white w-full px-10 py-4 space-y-4 font-semibold transition-all duration-300 rounded-b-xl shadow-xl/40 ">
+      <a class="block w-full  border-b border-[#35f281] pb-2" href="#home">Home</a>
+      <a class="block w-full  border-b border-[#35f281] pb-2" href="#projects">Projects</a>
+      <a class="block w-full  border-b border-[#35f281] pb-2" href="#services">Services</a>
+      <a class="block w-full  border-b border-[#35f281] pb-2" href="#contact">Contact</a>
+      <a class="block w-full  border-b border-[#35f281] pb-2" href="#blog">Blog</a>
+      <a class="block w-full  pb-2" href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="w-full flex items-center justify-center px-4 text-center pt-10 min-h-[calc(100vh-0px)]">
+  <div class="max-w-3xl w-full">
+    
+    <!-- Name -->
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-br from-white to-[#35f281] bg-clip-text text-transparent inline-block mb-6">
+        Awindago Amidu
+      </h1>
+    </div>
+
+    <!-- Animated Role -->
+    <div class="text-2xl sm:text-3xl md:text-4xl font-medium h-12 flex items-center justify-center mb-4">
+      <span id="text" class="text-[#35f281]"></span><span class="text-white animate-pulse ml-1">|</span>
+    </div>
+
+    <!-- Short Bio -->
+    <p class="text-slate-300 text-lg sm:text-xl leading-loose mb-6">
+      I design the web, code mobile experiences,<br class="hidden sm:block">
+      and visualize data that matters.
+    </p>
+
+    <!-- Call to Action Buttons -->
+    <div class="flex justify-center gap-4 mt-6">
+      <a href="#projects" class="px-6 py-3 bg-[#35f281] text-black font-semibold rounded-lg hover:scale-105 transition">
+        View Projects
+      </a>
+      <a href="#contact" class="px-6 py-3 border border-[#35f281] text-[#35f281] rounded-lg hover:bg-[#35f281]/10 transition">
+        Hire Me
+      </a>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-5 mt-8">
+      <a href="https://linkedin.com/in/amidu-awindago" target="_blank" class="text-blue-700 text-2xl hover:text-blue-900 transition">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/iamavoka" target="_blank" class="text-white text-2xl hover:text-black transition">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="#" id="whatsapp-link" target="_blank" class="text-green-600 text-2xl hover:text-green-800 transition">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="#" id="email-link" class="text-red-500 text-2xl hover:text-red-700 transition">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/Fancynet24" target="_blank" class="text-white text-2xl hover:text-black transition">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!---About section-->
+<section id="about" class="bg-[#f8f9fa] text-[#05192d] dark:bg-gray-950 py-12 px-8 md:px-12 lg:px-20">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold  dark:text-white mb-4">
+       About Me
+    </h2>
+    <p class="text-lg  dark:text-gray-300 mb-5 max-w-3xl mx-auto">
+      Hey there! I’m <span class="text-[#17d4a7] font-semibold">Awindago Amidu</span>  a creative developer who crafts beautiful websites, powerful apps, and data dashboards that actually make sense. I blend code and creativity to bring ideas to life.
+    </p>
+  </div>
+
+  <div class="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto pt-6">
+    <!-- Web Dev -->
+    <div class="group p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <div class="text-4xl mb-4 text-pink-500 group-hover:scale-110 transition-transform">🌐</div>
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Web Development</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm">
+        I build fast, modern websites using clean code and sleek designs that look great on every screen.
+      </p>
+    </div>
+
+    <!-- Mobile Dev -->
+    <div class="group p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <div class="text-4xl mb-4 text-yellow-500 group-hover:scale-110 transition-transform">📱</div>
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">App Development</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm">
+        Cross-platform mobile apps built with Flutter and React Native — smooth, smart, and scalable.
+      </p>
+    </div>
+
+    <!-- Data Analytics -->
+    <div class="group p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <div class="text-4xl mb-4 text-blue-500 group-hover:scale-110 transition-transform">📊</div>
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Data Analytics</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm">
+        I create insightful dashboards with Power BI that turn raw data into meaningful decisions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech-stack" class="bg-[#0a192f] py-16 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-[#17d4a7]">⚙️ Tech Stack</h2>
+      <p class="text-gray-300 mt-2 text-lg">Tools I use to build magical user experiences</p>
+    </div>
+
+    <div class="flex flex-row flex-wrap justify-center items-center gap-10 px-4" data-aos="fade-up" data-aos-duration="1000">
+      
+      <!-- HTML -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">HTML</span>
+      </div>
+
+      <!-- CSS -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">CSS</span>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">JavaScript</span>
+      </div>
+
+      <!-- Tailwind CSS -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="Tailwind CSS" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">Tailwind</span>
+      </div>
+
+      <!-- React -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">React</span>
+      </div>
+
+      <!-- Git -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">Git</span>
+      </div>
+
+      <!-- MySQL -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">MySQL</span>
+      </div>
+
+      <!-- Power BI -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">Power BI</span>
+      </div>
+
+      <!-- Excel -->
+      <div class="group flex flex-col items-center transition-transform hover:scale-110 duration-300">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" class="w-14 h-14" />
+        <span class="mt-2 text-sm text-gray-300 group-hover:text-[#17d4a7]">Excel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+  <!-- Projects Section -->
+<section class="bg-white dark:bg-gray-900 py-16 px-6 md:px-12 lg:px-20" id="projects">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-up">My Projects</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-300 mb-12 animate-fade-up delay-100">
+      A curated selection of my work across web development, mobile apps, and data dashboards.
+    </p>
+
+    <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Project Card: Smart Grocery Website -->
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 max-w-md w-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-up">
+        <img src="images/smartstore.jpg" alt="Grocery Website" class="rounded-xl mb-4 shadow-md w-full h-52 object-cover" />
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://img.icons8.com/color/48/shop.png" class="w-10 h-10" alt="Icon" />
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Smart Grocery Website</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-3">A mobile-friendly website for vendors to showcase and manage fresh produce online.</p>
+        <p class=" text-[#00b4d8] text-sm mb-4"><strong>Tech:</strong> HTML, Tailwind CSS, JavaScript</p>
+        <a href="#" target="_blank" class="inline-block bg-[#17d4a7] text-white px-4 py-2 rounded hover:bg-[#14b292] transition">Live Demo</a>
+      </div>
+
+      <!-- Project Card: Blood Donation App -->
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 max-w-md w-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-up delay-100">
+        <img src="images/blood_donation_app.png" alt="Blood Donation App" class="rounded-xl mb-4 shadow-md w-full h-52 object-cover" />
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://img.icons8.com/color/48/like--v1.png" class="w-10 h-10" alt="Icon" />
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Blood Donation App</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-3">Connects donors to hospitals with request tracking and location services.</p>
+        <p class="text-[#00b4d8] text-sm mb-4"><strong>Tech:</strong> React Native, Firebase, Git</p>
+        <a href="#" target="_blank" class="inline-block bg-[#17d4a7] text-white px-4 py-2 rounded hover:bg-[#14b292] transition">Preview</a>
+      </div>
+
+      <!-- Project Card: Hotel Dashboard -->
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 max-w-md w-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-up delay-200">
+        <img src="images/hotel_dashboard.jpg" alt="Hotel Dashboard" class="rounded-xl mb-4 shadow-md w-full h-52 object-cover" />
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://img.icons8.com/color/48/bar-chart--v1.png" class="w-10 h-10" alt="Icon" />
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Hotel Booking Dashboard</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-3">Power BI dashboard tracking booking data, revenue, and trends for a hotel business.</p>
+        <p class="text-[#00b4d8] text-sm mb-4"><strong>Tech:</strong> Power BI, DAX, Excel</p>
+        <a href="/pdfs/hotels_dashboard.pdf" target="_blank" class="inline-block bg-[#17d4a7] text-white px-4 py-2 rounded hover:bg-[#14b292] transition">View PDF</a>
+      </div>
+
+      <!-- Project Card: Portfolio Website -->
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 max-w-md w-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-up delay-300">
+        <img src="images/portfolio.jpg" alt="Portfolio Website" class="rounded-xl mb-4 shadow-md w-full h-52 object-cover" />
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://img.icons8.com/color/48/admin-settings-male.png" class="w-10 h-10" alt="Icon" />
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Portfolio Website</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-3">A clean and responsive site to showcase my profile and past work.</p>
+        <p class="text-[#00b4d8] text-sm mb-4"><strong>Tech:</strong> HTML, Tailwind CSS, JavaScript</p>
+        <a href="#" target="_blank" class="inline-block bg-[#17d4a7] text-white px-4 py-2 rounded hover:bg-[#14b292] transition">Live Site</a>
+      </div>
+
+      <!-- Project Card: Superstore Dashboard -->
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 max-w-md w-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-up delay-400">
+        <img src="images/superstore_preview.png" alt="Superstore Dashboard Preview" class="rounded-xl mb-4 shadow-md w-full h-52 object-cover" />
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://img.icons8.com/color/48/combo-chart--v1.png" class="w-10 h-10" alt="Icon" />
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Superstore Sales Dashboard</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-3">Sales and profit analysis with filtering, category performance, and KPIs.</p>
+        <p class="text-[#00b4d8] text-sm mb-4"><strong>Tech:</strong> Power BI, DAX, Excel, Data Modeling</p>
+        <a href="/pdfs/superstore_dashboard.pdf" target="_blank" class="inline-block bg-[#17d4a7] text-white px-4 py-2 rounded hover:bg-[#14b292] transition">View PDF</a>
+      </div>
+
+      <!-- Project Card: Financial Records Tracker -->
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 max-w-md w-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-up delay-500">
+        <img src="images/finance_tracker.png" alt="Financial Records Tracker" class="rounded-xl mb-4 shadow-md w-full h-52 object-cover" />
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://img.icons8.com/color/48/accounting.png" class="w-10 h-10" alt="Icon" />
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Financial Records Tracker</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-3">Track personal or business income and expenses using interactive Excel sheets and charts.</p>
+        <p class="text-[#00b4d8] text-sm mb-4"><strong>Tech:</strong> Microsoft Excel, Formulas, Charts</p>
+        <a href="/pdfs/financial_tracker_sample.pdf" target="_blank" class="inline-block bg-[#17d4a7] text-white px-4 py-2 rounded hover:bg-[#14b292] transition">View PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!--- Services Section -->
+<section class="bg-white py-12 px-8 md:px-12 lg:px-24" id="services">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#17d4a7] mb-4">Services I Offer</h2>
+    <p class="text-gray-900 text-lg mb-10 max-w-3xl mx-auto">
+      I provide modern, scalable, and results-driven digital solutions to help you grow your online presence and make smarter business decisions.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Service Card Start -->
+      <div class="bg-yellow-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up">
+        <div class="flex items-center justify-center w-14 h-14 bg-yellow-200 text-yellow-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="code" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Web Development</h3>
+        <p class="text-gray-600 text-sm">Clean, responsive websites built using HTML, CSS, JavaScript, Tailwind CSS, and modern frameworks.</p>
+      </div>
+
+      <div class="bg-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex items-center justify-center w-14 h-14 bg-pink-200 text-pink-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="smartphone" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">App Development</h3>
+        <p class="text-gray-600 text-sm">Cross-platform mobile apps using React Native for seamless performance on Android and iOS.</p>
+      </div>
+
+      <div class="bg-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center justify-center w-14 h-14 bg-gray-300 text-gray-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Data Analytics</h3>
+        <p class="text-gray-600 text-sm">Discover trends and insights using Power BI, Excel, and data visualization techniques.</p>
+      </div>
+
+
+      <div class="bg-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up">
+        <div class="flex items-center justify-center w-14 h-14 bg-blue-200 text-blue-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="lightbulb" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Tech Consulting</h3>
+        <p class="text-gray-600 text-sm">Strategy, tools, and guidance to help you launch, optimize, and grow your tech stack.</p>
+      </div>
+
+
+      <div class="bg-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center justify-center w-14 h-14 bg-indigo-200 text-indigo-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="search" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">SEO Optimization</h3>
+        <p class="text-gray-600 text-sm">Rank higher on Google and attract organic traffic through proven on-page and technical SEO strategies.</p>
+      </div>
+
+      <div class="bg-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up" data-aos-delay="150">
+        <div class="flex items-center justify-center w-14 h-14 bg-pink-200 text-pink-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="megaphone" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Social Media Marketing</h3>
+        <p class="text-gray-600 text-sm">Engage your audience and grow your brand through strategic content, ads, and campaign management.</p>
+      </div>
+
+      <div class="bg-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up">
+        <div class="flex items-center justify-center w-14 h-14 bg-blue-200 text-blue-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="server" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">General IT Services</h3>
+        <p class="text-gray-600 text-sm">From troubleshooting to hardware setup, we provide essential tech support and maintenance for homes and offices.</p>
+      </div>
+
+      <div class="bg-yellow-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition duration-300" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex items-center justify-center w-14 h-14 bg-yellow-200 text-yellow-800 rounded-full mb-4 mx-auto">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">IT Training</h3>
+        <p class="text-gray-600 text-sm">Learn practical IT skills in web development, productivity tools, and digital literacy for all levels.</p>
+      </div>
+      <!-- Service Card End -->
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Form -->
+    <section class=" bg-white py-20 px-6 md:px-12 lg:px-24" id="contact">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="flex justify-center mb-4">
+        <div class="w-14 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+          <i data-lucide="mail" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#17d4a7] mb-2">Get in Touch</h2>
+      <p class=" text-black text-lg max-w-2xl mx-auto">
+        Have a project or question in mind? Let’s talk! I’d love to hear from you.
+      </p>
+    </div>
+
+    <form class="space-y-6 bg-white p-8 rounded-2xl shadow-xl">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input id="contact-name" type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input id="contact-email" type="email" placeholder="you@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+      </div>
+      <div>
+        <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea id="contact-message" rows="5" placeholder="Your message..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!--footer-->
+
+<footer class="bg-[#05192d] text-gray-300 pt-16 px-6 sm:px-8 md:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12">
+
+    <!-- Brand / Intro -->
+    <div data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-white mb-4">Awindago</h3>
+      <p class="text-sm text-[#f8f4e9] leading-relaxed">
+        I create scalable web and mobile solutions with a passion for clean code and elegant UI/UX.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div data-aos="fade-up" data-aos-delay="100">
+      <h4 class="text-lg font-semibold text-white mb-4">Navigation</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+        <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div data-aos="fade-up" data-aos-delay="200">
+      <h4 class="text-lg font-semibold text-white mb-4">Resources</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+        <li><a href="#blog" class="hover:text-white transition">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Social / Contact -->
+    <div data-aos="fade-up" data-aos-delay="300">
+      <h4 class="text-lg font-semibold text-white mb-4">Let's Connect</h4>
+      <p class="text-sm text-gray-400 mb-4">I'm active on these platforms:</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://github.com/Fancynet24" class="hover:text-white" aria-label="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com/in/amidu-awindago" class="hover:text-white" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="https://x.com/iamavoka" class="hover:text-white" aria-label="Twitter">
+          <i data-lucide="twitter" class="w-5 h-5"></i>
+        </a>
+        <a href="#" class="hover:text-white" aria-label="Dribbble">
+          <i data-lucide="dribbble" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Text -->
+  <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500 pb-6">
+    &copy; <span id="year"></span> Awindago. Crafted with ❤️. All rights reserved.
+  </div>
+</footer>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 rounded-full bg-[#35f281] text-black text-xl shadow-lg hover:bg-[#2bd070] transition hidden z-50">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- Scripts -->
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>lucide.createIcons();</script>
+<!-- Auto Year -->
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="main.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+</body>
+</html>
