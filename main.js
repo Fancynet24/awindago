@@ -100,6 +100,7 @@ const scrollBtn = document.getElementById("scrollToTopBtn");
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  //contact form submission
  const form = document.querySelector("form");
 
     form.addEventListener("submit", function (e) {
